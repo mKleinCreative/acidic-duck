@@ -23,8 +23,7 @@ What does quality code look like?
 ## User Stories & Specifications
 
 **As a User...**
-- [ ] I can access the app the web.
-- [ ] Choose 1 of (at least) 3 card layouts.
+- [ ] I can access the app on the web.
 - [ ] Learn about each card layouts.
 - [ ] Sort cards into the layouts face down and click them to turn them over.
 - [ ] I can get self reflection questions based on my card results.
@@ -35,16 +34,12 @@ What does quality code look like?
 - [ ]  If you use any frameworks or code libraries cite them.
 - [ ] Use design & UX principals to make the app clear and easy to use.
 - [ ] Use Node to create a back end
-- [ ] Use React Native to create and deploy a functional phone app.
-- [ ] This is a multi page app:
 
-Optional Goal Ideas
-- [ ]  NOT use any front-end framework [no react, do it from scratch]
-- [ ] Use react native to deploy as a iphone app.
-- [ ] Use Test Driven Development using Jasmine.
+Stretch Goals
+- [ ] Choose 1 of (at least) 3 card layouts.
 - [ ] card flipping/sorting animations
-### Required
 
+### Required
 _Do not remove these specs - they are required for all goals_.
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
