@@ -1,12 +1,4 @@
-import _ from 'lodash'
-
-const NAME = 0
-const NORMAL_DESCRIPTION = 1
-const REVERSE_DESCRIPTION = 2
-
-
-
-const cardInfo = {
+const old = {
   cups01: [
     "Ace of Cups",
     "Ace of cups is the card for new love, compassion, joy and creativity. If this card shows up with Ace of Pentacles it often means moving in together in a relationship.",
@@ -399,16 +391,18 @@ const cardInfo = {
     ]
 }
 
-export default cardInfo
+var json = Object.keys(old).map(key => {
+  var card = old[key]
+  var assetName = key
+  var name = card[0]
+  var description = card[1]
+  var reverseDescription = card[2]
+  return {
+    assetName: assetName,
+    name: name,
+    description: description,
+    reverseDescription: reverseDescription,
+  }
+})
 
-// export default _.shuffle( Object.keys( cardInfo ).map( fileNameKey => {
-//   const cardData = cardInfo[ fileNameKey ]
-//
-//   return {
-//     name: cardData[ NAME ],
-//     normalDescription: cardData[ NORMAL_DESCRIPTION ],
-//     reverseDescription: cardData[ REVERSE_DESCRIPTION ],
-//     cardClassName: fileNameKey,
-//     image: `https://mkleincreative.files.wordpress.com/2016/09/${fileNameKey.toLowerCase()}.jpg`
-//   }
-// }))
+console.log(JSON.stringify(json, null, 2))

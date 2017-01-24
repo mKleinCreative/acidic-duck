@@ -3,3 +3,19 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.Card {
+  background-color: lime;
+}
+.Card img{
+  height: 350px;
+  width: 250px;
+}
+
+.Card-faceUp{
+  background-color: orange;
+}
+
+.PyramidLayout-cards {
+  background-color: purple;
+}
