@@ -12,16 +12,16 @@ class App extends Component {
     this.positions = {}
     this.currentLayout = {}
     this.state = {
-      arrayOfCards: cardInfo
+      cards: cardInfo
     }
   }
 
   render() {
-    const {arrayOfCards} = this.state
+    const {cards} = this.state
 
     return (
       <div className="App">
-        <Layout cards={arrayOfCards} />
+        <Layout cards={cards} />
         <ReadingInfo />
       </div>
     );
