@@ -11,8 +11,9 @@ export default class Card extends Component {
   render() {
     return <div>
       <h1>HI THERE</h1>
+      <img src={this.props.card.image}/>
       <div>{this.props.card.name}</div>
-        <div>{this.props.card.normalDescription}</div>
+      <div>{this.props.card.normalDescription}</div>
     </div>
   }
 }
