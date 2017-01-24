@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
+import Layout from './components/Layout.js'
+import ReadingInfo from './components/ReadingInfo.js'
+import cardInfo from './cardInfo'
 import './App.css';
 
 class App extends Component {
@@ -8,18 +11,18 @@ class App extends Component {
     this.layouts = {}
     this.positions = {}
     this.currentLayout = {}
-    this.state = {}
+    this.state = {
+      arrayOfCards: cardInfo
+    }
   }
+
   render() {
+    const arrayOfCards = this.state.arrayOfCards
+
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Layout cards={arrayOfCards} />
+        <ReadingInfo />
       </div>
     );
   }

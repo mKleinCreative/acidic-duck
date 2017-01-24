@@ -4,7 +4,7 @@ const NAME = 0
 const NORMAL_DESCRIPTION = 1
 const REVERSE_DESCRIPTION = 2
 
-const cardinfo = {
+const cardInfo = {
   cups01: [
     "Ace of Cups",
     "Ace of cups is the card for new love, compassion, joy and creativity. If this card shows up with Ace of Pentacles it often means moving in together in a relationship.",
@@ -397,8 +397,8 @@ const cardinfo = {
     ]
 }
 
-export default _.shuffle( Object.keys( cardinfo ).map( fileNameKey => {
-  const cardData = cardinfo[ fileNameKey ]
+export default _.shuffle( Object.keys( cardInfo ).map( fileNameKey => {
+  const cardData = cardInfo[ fileNameKey ]
 
   return {
     name: cardData[ NAME ],
