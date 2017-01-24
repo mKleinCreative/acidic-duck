@@ -9,8 +9,8 @@ export default class Card extends Component {
   render() {
     return <div>
       <h1>HI THERE</h1>
-      <h3>{JSON.stringify(this.props.card)}</h3>
-      {/* <div>{this.props.card.normalDescription}</div> */}
+      <div>{this.props.card.name}</div>
+        {/* <div>{this.props.card.normalDescription}</div> */}
     </div>
   }
 }

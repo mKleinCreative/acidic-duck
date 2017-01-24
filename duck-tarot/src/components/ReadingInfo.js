@@ -6,7 +6,6 @@ export default class ReadingInfo extends Component {
     return (
       <div>
         <h2>NO PLESAE WERK</h2>
-        <Card />
       </div>
     )
   }

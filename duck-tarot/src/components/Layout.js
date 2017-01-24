@@ -11,7 +11,10 @@ export default class Layout extends Component {
 
   mapCards() {
     return this.props.cards.map((card, index) =>
-      <Card key={index} card={card}/>
+      <Card
+        key={index}
+        card={card}
+      />
     )
   }
 

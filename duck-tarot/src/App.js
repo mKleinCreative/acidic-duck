@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   render() {
-    const arrayOfCards = this.state.arrayOfCards
+    const {arrayOfCards} = this.state
 
     return (
       <div className="App">
