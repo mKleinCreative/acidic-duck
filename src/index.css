@@ -8,19 +8,22 @@ body {
 
 }
 .Card img{
-  height: 350px;
-  width: 250px;
+  height: 250px;
+  width: 150px;
 }
 
 .Card-front {
+
+}
+
+.hidden {
   display: none;
 }
-.Card-back {
 
-}
+
 
 .Card-faceUp{
-  
+
 }
 
 .PyramidLayout-cards {
