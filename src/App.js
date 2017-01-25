@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import PyramidLayout from './components/PyramidLayout.js'
-import ReadingInfo from './components/ReadingInfo.js'
 import cards from './cards.json'
 import './App.css'
 
@@ -22,7 +21,6 @@ class App extends Component {
     return (
       <div className="App">
         <Layout cards={cards} />
-        <ReadingInfo />
       </div>
     );
   }

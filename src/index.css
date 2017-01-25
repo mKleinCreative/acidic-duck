@@ -5,17 +5,24 @@ body {
 }
 
 .Card {
-  background-color: lime;
+
 }
 .Card img{
   height: 350px;
   width: 250px;
 }
 
+.Card-front {
+  display: none;
+}
+.Card-back {
+
+}
+
 .Card-faceUp{
-  background-color: orange;
+  
 }
 
 .PyramidLayout-cards {
-  background-color: purple;
+
 }

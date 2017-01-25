@@ -23,6 +23,7 @@ export default class PyramidLayout extends Component {
   repickCards = () => {
     const cards = this.pickCards()
     this.setState({cards})
+    this.setState({flippedCards: []})
   }
 
   flipNextCard = () => {
