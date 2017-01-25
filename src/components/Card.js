@@ -3,27 +3,32 @@ import React, {Component, PropTypes} from 'react'
 export default class Card extends Component {
 
   static propTypes = {
-    card: PropTypes.object.isRequired,
-    faceUp: PropTypes.bool.isRequired,
+    "assetName": PropTypes.string.isRequired,
+    "name": PropTypes.string.isRequired,
+    "description": PropTypes.string.isRequired,
+    "reverseDescription": PropTypes.string.isRequired,
+    "faceUp": PropTypes.bool.isRequired,
+    "x": PropTypes.number.isRequired,
+    "y": PropTypes.number.isRequired
+
   }
 
-  static defaultProps = {
-    faceUp: false,
+  imageSource() {
+    const { assetName } = this.props
+
+    return `https://mkleincreative.files.wordpress.com/2016/09/${assetName.toLowerCase()}.jpg`
   }
 
   render() {
-    const  { card, faceUp } = this.props
-    const imgSrc = `https://mkleincreative.files.wordpress.com/2016/09/${card.assetName.toLowerCase()}.jpg`
+    const { name, description } = this.props
 
-    const className = `Card ${faceUp ? 'Card-faceUp' : ''}`
-    return <div className={className}>
-      <div className="Card-front">
-        <img src={imgSrc}/>
+    return(
+      <div className="Card">
+        <img src={this.imageSource()} />
+        <h1>{name}</h1>
+        <div>{description}</div>
       </div>
-      <div className="Card-back">
-        <h1>{card.name}</h1>
-        <div>{card.description}</div>
-      </div>
-    </div>
+    )
   }
+
 }
