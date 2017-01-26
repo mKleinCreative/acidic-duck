@@ -25,7 +25,7 @@ export default class Card extends Component {
     return(
       <div className="Card">
         <img src={this.imageSource()} />
-        <h1>{name}</h1>
+        <h3>{name}</h3>
         <div>{description}</div>
       </div>
     )

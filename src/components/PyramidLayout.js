@@ -7,6 +7,7 @@ export default class PyramidLayout extends Component {
 
   static propTypes = {
     cards: PropTypes.array.isRequired,
+
   }
 
   renderCards() {
@@ -28,6 +29,7 @@ export default class PyramidLayout extends Component {
   render() {
     return (
       <div className="PyramidLayout">
+
         <div className="PyramidLayout-cards">{this.renderCards()}</div>
       </div>
     )
