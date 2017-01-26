@@ -15,7 +15,7 @@ export default class PyramidLayout extends Component {
     // render Cards or CardBacks
 
     return this.props.cards.map( card => {
-      return Object.assign( {}, card, { x: 5, y: 1 } )
+      return Object.assign( {}, card )
     }).map( card => {
       if( card.faceUp ) {
         return <Card {...card} />
