@@ -7,6 +7,8 @@ import PyramidLayout from './components/PyramidLayout.js'
 import CARDS_DATA from './cards.json'
 import './App.css'
 
+import LAYOUT_DATA from './layoutData.json'
+
 const LAYOUTS = {
   'pyramid': PyramidLayout,
 }
@@ -18,18 +20,20 @@ class App extends Component {
     this.state = {
       layout: 'pyramid',
       cards: this.pickCards(),
-      flippedIndex: 0
+      flippedIndex: 0,
+      positionInfoArray: [],
+      positionInfo: ''
     }
   }
 
   pickCards(){
-    return _.sampleSize( CARDS_DATA, 6 ).map( card =>
+    return _.sampleSize( CARDS_DATA, 5 ).map( card =>
       Object.assign( {}, card, { faceUp: false } )
     )
   }
 
   flipCard() {
-    const { cards, flippedIndex } = this.state
+    const { cards, flippedIndex, positionInfoArray } = this.state
 
     this.setState({
       cards: [
@@ -37,7 +41,10 @@ class App extends Component {
         Object.assign( {}, cards[ flippedIndex ], { faceUp: true } ),
         ...cards.slice( flippedIndex + 1 )
       ],
-      flippedIndex: flippedIndex + 1
+      //Array commented out for later refactoring
+      //positionInfoArray: positionInfoArray.concat( LAYOUT_DATA[flippedIndex].positionInfo ),
+      flippedIndex: flippedIndex + 1,
+      positionInfo: LAYOUT_DATA[flippedIndex].positionInfo,
     })
   }
 
@@ -47,6 +54,11 @@ class App extends Component {
     return (
       <div className="App">
         <button onClick={this.flipCard.bind(this)}>Flip Next Card</button>
+
+        <div>
+        {this.state.positionInfo}
+        </div>
+
         <Layout cards={this.state.cards} />
       </div>
     );
