@@ -28,7 +28,7 @@ class App extends Component {
 
   pickCards(){
     return _.sampleSize( CARDS_DATA, 5 ).map( card =>
-      Object.assign( {}, card, { faceUp: false } )
+      Object.assign( {}, card, { faceUp: false, isReversed: !!_.random(1) } )
     )
   }
 
