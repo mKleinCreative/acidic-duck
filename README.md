@@ -24,15 +24,15 @@ What does quality code look like?
 
 **As a User...**
 - [ ] I can access the app on the web.
-- [ ] Learn about each card layouts.
+- [x] Learn about each card layouts.
 - [x] Sort cards into the layouts face down and click them to turn them over.
 - [ ] I can get self reflection questions based on my card results.
-- [ ] I am pleased by the user experience. The app is both attractive and intuitive to use.
+- [x] I am pleased by the user experience. The app is both attractive and intuitive to use.
 
 **Additional Specifications:**
 - [x] Create a library of Tarot cards and write a function that randomly presents them
-- [ ]  If you use any frameworks or code libraries cite them.
-- [ ] Use design & UX principals to make the app clear and easy to use.
+- [x]  If you use any frameworks or code libraries cite them.
+- [x] Use design & UX principals to make the app clear and easy to use.
 - [x] Use Node to create a back end
 
 Stretch Goals
