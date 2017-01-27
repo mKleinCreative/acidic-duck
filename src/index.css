@@ -2,6 +2,43 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("../public/images/bgimage.jpg");
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+
+.questionz{
+  -webkit-text-stroke: 1px rgba(255,126,25,.45);
+  text-shadow: 1.75px 2px 3px black, 0 0 .5em purple, 0 0 0.2em purple;
+  color: rgb(247,225,193);
+  font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
+}
+
+input {
+    border: 5px solid white;
+    -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+.rug {
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  background: rgba(0,175,199,0.22);
+  text-align: center;
 }
 
 .Card-reverse img {
@@ -12,6 +49,7 @@ body {
   -o-transform: rotate(180deg); /* Opera */
   -ms-transform: rotate(180deg); /* IE9 */
   transform: rotate(180deg);
+  box-shadow: 
 }
 
 .Card img{
@@ -19,25 +57,15 @@ body {
   width: 150px;
 }
 
-.Card-front {
-
-}
-
 .hidden {
   display: none;
 }
 
-.cardPositionInfo{
-
-}
-
 .PyramidLayout-cards {
-
   	display: flex;
   	flex-direction: row;
   	flex-wrap: nowrap;
   	justify-content: center;
   	align-items: baseline;
   	align-content: stretch;
-
 }

@@ -23,7 +23,6 @@ class App extends Component {
       flippedIndex: 0,
       positionInfoArray: [],
       positionInfo: '',
-
       question: '',
       questionEntered: false
     }
@@ -63,10 +62,10 @@ class App extends Component {
   questionForm() {
     return (
       <div>
-        <h2>Please ask your question:</h2>
+        <h2 className="questionz">Please ask your question:</h2>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input type="text" value={this.state.question} onChange={this.onChange.bind(this)} ref="question"/>
-          <button type="submit">Submit</button>
+          <button className="questionz" type="submit">Submit</button>
         </form>
       </div>
     )
@@ -74,26 +73,24 @@ class App extends Component {
 
   questionDisplay() {
     return (
-      <div>{this.state.question}</div>
+      <div className="questionz">{this.state.question}</div>
     )
   }
 
   render() {
     const Layout = LAYOUTS[this.state.layout]
-
+    const positionInfos = LAYOUT_DATA.map(function(positionInfo){
+      return positionInfo.positionInfo
+    })
     return (
-      <div className="App">
-        <h1>Welcome to your Tarot reading</h1>
+      <div className="App rug">
+        <h1 className="questionz">Welcome to your Tarot reading</h1>
         {this.state.questionEntered ? this.questionDisplay() : this.questionForm() }
         <br/>
-
-        <button onClick={this.flipCard.bind(this)}>Flip Next Card</button>
-
+        <button className="questionz" onClick={this.flipCard.bind(this)}>Flip Next Card</button>
+        <Layout cards={this.state.cards} positionInfos={positionInfos} />
         <div>
-        {this.state.positionInfo}
         </div>
-
-        <Layout cards={this.state.cards} />
       </div>
     );
   }
