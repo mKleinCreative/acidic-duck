@@ -18,7 +18,8 @@ export default class PyramidLayout extends Component {
       return Object.assign( {}, card )
     }).map( (card, index) => {
       if( card.faceUp ) {
-        return <Card {...card} key={`card-${index}`} />
+        return <Card {...card} positionInfo={this.props.positionInfos[index]}
+                key={`card-${index}`} />
       } else {
         return <CardBack {...card} key={`card-${index}`} />
       }
@@ -29,7 +30,6 @@ export default class PyramidLayout extends Component {
   render() {
     return (
       <div className="PyramidLayout">
-
         <div className="PyramidLayout-cards">{this.renderCards()}</div>
       </div>
     )
