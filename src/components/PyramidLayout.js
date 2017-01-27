@@ -16,11 +16,11 @@ export default class PyramidLayout extends Component {
 
     return this.props.cards.map( card => {
       return Object.assign( {}, card )
-    }).map( card => {
+    }).map( (card, index) => {
       if( card.faceUp ) {
-        return <Card {...card} />
+        return <Card {...card} key={`card-${index}`} />
       } else {
-        return <CardBack {...card} />
+        return <CardBack {...card} key={`card-${index}`} />
       }
     })
 

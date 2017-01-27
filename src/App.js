@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import _ from 'lodash'
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import PyramidLayout from './components/PyramidLayout.js'
 
 import CARDS_DATA from './cards.json'
@@ -22,7 +22,10 @@ class App extends Component {
       cards: this.pickCards(),
       flippedIndex: 0,
       positionInfoArray: [],
-      positionInfo: ''
+      positionInfo: '',
+
+      question: '',
+      questionEntered: false
     }
   }
 
@@ -33,7 +36,7 @@ class App extends Component {
   }
 
   flipCard() {
-    const { cards, flippedIndex, positionInfoArray } = this.state
+    const { cards, flippedIndex } = this.state
 
     this.setState({
       cards: [
@@ -48,11 +51,42 @@ class App extends Component {
     })
   }
 
+  handleSubmit(event){
+    event.preventDefault()
+    this.setState({ questionEntered: true })
+  }
+
+  onChange( event ) {
+    this.setState({ question: event.target.value })
+  }
+
+  questionForm() {
+    return (
+      <div>
+        <h2>Please ask your question:</h2>
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <input type="text" value={this.state.question} onChange={this.onChange.bind(this)} ref="question"/>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    )
+  }
+
+  questionDisplay() {
+    return (
+      <div>{this.state.question}</div>
+    )
+  }
+
   render() {
     const Layout = LAYOUTS[this.state.layout]
 
     return (
       <div className="App">
+        <h1>Welcome to your Tarot reading</h1>
+        {this.state.questionEntered ? this.questionDisplay() : this.questionForm() }
+        <br/>
+
         <button onClick={this.flipCard.bind(this)}>Flip Next Card</button>
 
         <div>

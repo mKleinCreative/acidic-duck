@@ -32,7 +32,7 @@ export default class Card extends Component {
     return(
       //change class name depending on isReversed
       <div className={cardClass}>
-        <img src={this.imageSource()} />
+        <img src={this.imageSource()} alt={name} />
         <h3>{name}</h3>
         <div>{this.cardDescription()}</div>
       </div>
