@@ -10,7 +10,7 @@ export default class CardBack extends Component {
   render() {
     return (
       <div className="Card">
-        <img src={this.imageSource()} />
+        <img src={this.imageSource()} alt="Back of a Card" />
       </div>
     )
   }
