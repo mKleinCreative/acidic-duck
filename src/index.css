@@ -12,22 +12,28 @@ body {
 
 .questionz{
   -webkit-text-stroke: 1px rgba(255,126,25,.45);
-  text-shadow: 1.75px 2px 3px black, 0 0 .5em purple, 0 0 0.2em purple;
+  text-shadow: 1.75px 2px 15px black, 0 0 .5em lightblue, 0 0 0.2em lightblue;
   color: rgb(247,225,193);
   font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
 }
 
+.Header {
+  background-color: rgba(247, 225, 193, .50);
+  box-shadow: inset 0 0 10px #00467A;
+
+}
+
+.cardText {
+  font-size: 12px;
+}
+
+.App{
+  box-shadow: inset 0 0 10px #00467A;
+}
+
 input {
     border: 5px solid white;
-    -webkit-box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    -moz-box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
-    box-shadow:
-      inset 0 0 8px  rgba(0,0,0,0.1),
-            0 0 16px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 10px #00467A;
     padding: 15px;
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
@@ -49,12 +55,21 @@ input {
   -o-transform: rotate(180deg); /* Opera */
   -ms-transform: rotate(180deg); /* IE9 */
   transform: rotate(180deg);
-  box-shadow: 
+  border-radius: 5%;
 }
 
 .Card img{
-  height: 250px;
-  width: 150px;
+  height: 200px;
+  width: 120px;
+  border-radius: 5%;
+}
+
+.Card{
+  box-shadow: inset 0 0 10px #00467A;
+  background-color: rgba(247, 225, 193, .85);
+  width: 20%;
+  margin-top: 15px;
+
 }
 
 .hidden {

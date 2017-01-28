@@ -84,11 +84,13 @@ class App extends Component {
     })
     return (
       <div className="App rug">
-        <h1 className="questionz">Welcome to your Tarot reading</h1>
-        {this.state.questionEntered ? this.questionDisplay() : this.questionForm() }
+        <div className="Header">
+          <h1 className="questionz">Welcome to your Tarot reading</h1>
+          {this.state.questionEntered ? this.questionDisplay() : this.questionForm() }
+        </div>
         <br/>
         <button className="questionz" onClick={this.flipCard.bind(this)}>Flip Next Card</button>
-        <Layout cards={this.state.cards} positionInfos={positionInfos} />
+        <Layout cards={this.state.cards} positionInfos={positionInfos} flippedIndex={this.state.flippedIndex} />
         <div>
         </div>
       </div>

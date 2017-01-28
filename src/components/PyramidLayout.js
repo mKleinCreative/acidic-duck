@@ -19,6 +19,7 @@ export default class PyramidLayout extends Component {
     }).map( (card, index) => {
       if( card.faceUp ) {
         return <Card {...card} positionInfo={this.props.positionInfos[index]}
+                 flippedIndex={this.props.flippedIndex}
                 key={`card-${index}`} />
       } else {
         return <CardBack {...card} key={`card-${index}`} />
