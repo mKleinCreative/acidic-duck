@@ -74,7 +74,7 @@ class App extends Component {
 
   questionDisplay() {
     return (
-      <div className="questionz">{this.state.question}</div>
+      <h2 className="questionz">{this.state.question}</h2>
     )
   }
 
