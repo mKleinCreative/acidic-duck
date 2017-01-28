@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import _ from 'lodash'
 
 // import logo from './logo.svg';
-import PyramidLayout from './components/PyramidLayout.js'
+import FiveCardLayout from './components/FiveCardLayout.js'
 
 import CARDS_DATA from './cards.json'
 import './App.css'
@@ -10,7 +10,7 @@ import './App.css'
 import LAYOUT_DATA from './layoutData.json'
 
 const LAYOUTS = {
-  'pyramid': PyramidLayout,
+  'FiveCard': FiveCardLayout,
 }
 
 class App extends Component {
@@ -18,10 +18,10 @@ class App extends Component {
     super(props)
 
     this.state = {
-      layout: 'pyramid',
+      layout: 'FiveCard',
       cards: this.pickCards(),
       flippedIndex: 0,
-      positionInfoArray: [],
+      positionTitle: '',
       positionInfo: '',
       question: '',
       questionEntered: false
@@ -47,6 +47,7 @@ class App extends Component {
       //positionInfoArray: positionInfoArray.concat( LAYOUT_DATA[flippedIndex].positionInfo ),
       flippedIndex: flippedIndex + 1,
       positionInfo: LAYOUT_DATA[flippedIndex].positionInfo,
+      positionTitle: LAYOUT_DATA[flippedIndex].positionTitle
     })
   }
 
@@ -82,6 +83,10 @@ class App extends Component {
     const positionInfos = LAYOUT_DATA.map(function(positionInfo){
       return positionInfo.positionInfo
     })
+    const positionTitles = LAYOUT_DATA.map(function(positionTitle){
+      return positionTitle.positionTitle
+    })
+
     return (
       <div className="App rug">
         <div className="Header">
@@ -90,7 +95,7 @@ class App extends Component {
         </div>
         <br/>
         <button className="questionz" onClick={this.flipCard.bind(this)}>Flip Next Card</button>
-        <Layout cards={this.state.cards} positionInfos={positionInfos} flippedIndex={this.state.flippedIndex} />
+        <Layout cards={this.state.cards} positionInfos={positionInfos} positionTitles={positionTitles} flippedIndex={this.state.flippedIndex} />
         <div>
         </div>
       </div>
