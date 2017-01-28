@@ -26,10 +26,10 @@ What does quality code look like?
 ## User Stories & Specifications
 
 **As a User...**
-- [ ] I can access the app on the web.
+- [x] I can access the app on the web.
 - [x] Learn about each card layouts.
 - [x] Sort cards into the layouts face down and click them to turn them over.
-- [ ] I can get self reflection questions based on my card results.
+- [x] I can get self reflection questions based on my card results.
 - [x] I am pleased by the user experience. The app is both attractive and intuitive to use.
 
 **Additional Specifications:**
