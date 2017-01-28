@@ -28,14 +28,15 @@ export default class Card extends Component {
   render() {
     const { name, isReversed } = this.props
     const cardClass = `Card ${isReversed ? 'Card' : 'Card-reverse'}`
-    // const { positionInfo } = this.state
 
     return(
       <div className={cardClass}>
         <img src={this.imageSource()} alt={name} />
-        <h2 className="questionz">{this.props.positionInfo}</h2>
-        <h3 className="questionz">{name}</h3>
-        <div className="questionz">{this.cardDescription()}</div>
+        <p>Card Location</p>
+        <div className="cardText">{this.props.positionInfo}</div>
+        <p>Card Description</p>
+        <h4 className="cardText">{name}</h4>
+        <div className="cardText">{this.cardDescription()}</div>
 
       </div>
     )
