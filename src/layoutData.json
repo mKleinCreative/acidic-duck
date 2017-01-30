@@ -1,0 +1,27 @@
+[
+  {
+    "positionTitle" : "The Question",
+    "positionInfo" : "This card represents the subject, topic or question for the reading. Use it to help define the issue clearly."
+  },
+
+  {
+    "positionTitle" : "Background",
+    "positionInfo" : "Generally indicates events or attitudes that have lead to the present situation or question. Helpful for further insight into the issue."
+  },
+
+  {
+    "positionTitle" : "Sitter/Seeker",
+    "positionInfo" : "Influence on the Qu of the person receiving the reading, e.g. how he/she/they has responded so far or reacted emotionally. Hopes, expectaions, fears..."
+  },
+
+  {
+    "positionTitle" : "Outside Influences",
+    "positionInfo" : "The influence of the outside world or outside forces. May be interpreted in terms of other people, friends, family, boss, etc.."
+  },
+
+  {
+    "positionTitle" : "The Answer",
+    "positionInfo" : "Tarot's answer for this situation or question. Some take it as suggested actions, other as how to respond mentally or emotionally. Interpretation is key."
+  }
+
+]
